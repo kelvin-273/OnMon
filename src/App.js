@@ -1,27 +1,32 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import logo from './logo.svg';
+// import logo1 from './onmon-1.svg';
+import logo2 from './onmon-2.svg';
 import './App.css';
 import {Navbar} from 'react-bootstrap';
+import Image from 'react-bootstrap/Image';
+import CustomCarousel from './Components/Carousel';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="#home">
-            <img
+        <Navbar bg="dark" variant="dark" className="justify-content-center navbar-custom">
+          <Navbar.Brand href="/">
+            <Image fluid
               alt=""
-              src={logo}
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
+              src={logo2}
+              className="d-inline-block align-top header-logo"
             />
-            {'onMon'}
+            {''}
           </Navbar.Brand>
         </Navbar>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+        <div className="carousel_custom">
+          <CustomCarousel></CustomCarousel>
+        </div>
+
+        {/* <header className="App-header">
+          <Image src={logo1} className="App-logo" alt="logo"/>
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
@@ -33,7 +38,10 @@ class App extends Component {
           >
             Learn React
           </a>
-        </header>
+        </header> */}
+        <body>
+         
+        </body>
       </div>
     );
   }
